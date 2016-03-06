@@ -154,7 +154,8 @@ class TicketFieldHelpPlugin (Component):
             env = self.env
             page_name = value
         else:
-            path = os.path.join(os.path.dirname(self.env.path), elts[0])
+            dir_ = self._intertracs[elts[0]]
+            path = os.path.join(os.path.dirname(self.env.path), dir_)
             env = open_environment(path, True)
             page_name = elts[-1]
 
